@@ -11,15 +11,15 @@
 }
 
 :root {
-    --color-bg-dark: #264653;
-    --color-bg-black: #111111;
+    --color-bg-dark: #2A9D8F;
+    --color-bg-black: #264653;
     --color-white: #fefefe;
-    --color-primary: #7634d8;
+    --color-primary: #E76F51;
     --color-danger: rgb(249, 84, 84);
     --color-secondary: #2A9D8F;
     --color-accent: #E9C46A;
     --color-highlight: #F4A261;
-    --color-error: #E76F51;
+    --color-error: red;
 }
 
 body {
