@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import CreateNote from "./pages/CreateNote";
 import EditNote from "./pages/EditNote";
 import Notes from "./pages/Notes";
+import Dummy
 
 const App = () => {
   return (
