@@ -1,5 +1,11 @@
 import React from "react";
 
-export const Notes = () => {
-  return <div>Notes</div>;
+const Notes = () => {
+  return (
+    <section>
+      <header className="notes_header"></header>
+    </section>
+  );
 };
+
+export default Notes;
