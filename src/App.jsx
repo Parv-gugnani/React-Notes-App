@@ -28,7 +28,11 @@ const App = () => {
             path="/create-note"
             element={<CreateNote setNotes={setNotes} />}
           />
-          <Route path="/edit-note/:id" element={<EditNote />} />/
+          <Route
+            path="/edit-note/:id"
+            element={<EditNote notes={notes} setNotes={setNotes} />}
+          />
+          /
         </Routes>
       </BrowserRouter>
     </main>
