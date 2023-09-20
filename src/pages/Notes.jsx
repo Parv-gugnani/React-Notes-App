@@ -20,7 +20,7 @@ const Notes = ({ notes }) => {
           <NoteItem key={note.id} note={note} />
         ))}
       </div>
-      <Link className="btn add__btn">
+      <Link to="/create-note" className="btn add__btn">
         <BsPlusLg />
       </Link>
     </section>
