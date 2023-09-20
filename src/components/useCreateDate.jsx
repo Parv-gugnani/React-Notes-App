@@ -43,7 +43,7 @@ const useCreateDate = () => {
       monthName = "Invalid Month";
   }
 
-  const date = `${monthName} ${dateObj.getDate()}, ${dateObj.getFullYear()} [${dateObj.getHours()}:${dateObj.getMinutes()}:${dateObj.getMinutes()}]`;
+  const date = `${monthName} ${dateObj.getDate()}, ${dateObj.getFullYear()} [${dateObj.getHours()}:${dateObj.getMinutes()}]`;
 
   return date;
 };

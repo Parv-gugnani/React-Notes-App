@@ -19,28 +19,27 @@ const EditNote = ({ notes, setNotes }) => {
       const newNote = { ...note, title, details, date };
 
       const newNotes = notes.map((item) => {
-        if (item.id == id) {
-          item = newNote;
+        if (item.id === id) {
+          return newNote; // Return the updated note
         }
-        return item;
+        return item; // Return other notes unchanged
       });
       setNotes(newNotes);
     }
 
-    // redirect to
+    // Redirect to the homepage
     navigate("/");
   };
 
-  // delete the not
-
+  // Delete the note
   const handleDelete = () => {
-    const newNotes = notes.filter((item) => item.id != id); //using es6 function
-
-    setNotes(newNotes);
-    navigate("/");
+    if (window.confirm("Are you sure you want to delete")) {
+      // const newNotes = notes.filter((item) => item.id !== id); // Use !== to compare IDs
+      // setNotes(newNotes);
+      // navigate("/");
+    }
   };
 
-  //
   return (
     <section>
       <header className="create-note__header">
