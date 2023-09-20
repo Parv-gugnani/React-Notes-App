@@ -6,9 +6,13 @@ import { v4 as uuid } from "uuid";
 
 import useCreateDate from "../components/useCreateDate";
 
+const colors = ["#264653", "#E9C46A", "#F4A261", "#E76F51"];
+
 const CreateNote = ({ setNotes }) => {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
+  const [selectedColorIndex, setSelectedColorIndex] = useState(0);
+
   const date = useCreateDate();
   const navigate = useNavigate();
 
@@ -23,6 +27,13 @@ const CreateNote = ({ setNotes }) => {
       // redirect
       navigate("/");
     }
+  };
+
+  const handleColorChange = () => {
+    // Cycle through colors or reset to the first color when reaching the end
+    setSelectedColorIndex((prevIndex) =>
+      prevIndex === colors.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   return (

@@ -33,11 +33,11 @@ const EditNote = ({ notes, setNotes }) => {
 
   // Delete the note
   const handleDelete = () => {
-    if (window.confirm("Are you sure you want to delete")) {
-      // const newNotes = notes.filter((item) => item.id !== id); // Use !== to compare IDs
-      // setNotes(newNotes);
-      // navigate("/");
-    }
+    // if (window.confirm("Are you sure you want to delete")) {
+    const newNotes = notes.filter((item) => item.id !== id); // Use !== to compare IDs
+    setNotes(newNotes);
+    navigate("/");
+    // }
   };
 
   return (
