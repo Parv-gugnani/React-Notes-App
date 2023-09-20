@@ -31,6 +31,15 @@ const EditNote = ({ notes, setNotes }) => {
     navigate("/");
   };
 
+  // delete the not
+
+  const handleDelete = () => {
+    const newNotes = notes.filter((item) => item.id != id); //using es6 function
+
+    setNotes(newNotes);
+    navigate("/");
+  };
+
   //
   return (
     <section>
@@ -41,7 +50,7 @@ const EditNote = ({ notes, setNotes }) => {
         <button className="btn lg primary" onClick={handleForm}>
           Save
         </button>
-        <button className="btn danger">
+        <button className="btn danger" onClick={handleDelete}>
           <RiDeleteBin6Line />
         </button>
       </header>
